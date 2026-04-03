@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page</title>
+  <meta charset="UTF-8">
+  <title>Interactive Index Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    #toggleText {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+    .color-box {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      background-color: lightblue;
+      border: 2px solid #333;
+      transition: background-color 0.5s;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a simple paragraph on my first website.</p>
-</body>
-</html>
+  <h1>Welcome to My Interactive Page</h1>
+
+  <!-- Toggle button -->
+  <button onclick="toggleText()">Click to Toggle Text</button>
+  <p id="toggleText">Hello! You revealed me 🎉</p>
+
+  <!-- Input form -->
+  <h2>Type something:</h2>
+  <input type="text" id="userInput" placeholder="Enter text here" oninput="showInput()">
+  <p id="displayInput"></p>
+
+  <!-- Color change box -->
+  <div class="color-box" id="colorBox"></div>
+  <button onclick="changeColor()">Change Box Color</button>
+
+  <script>
+    function toggleText() {
+      const text = document.getElementById("toggleText");
+      text.style.display = (text.style.display === "none") ? "block" : "none";
+    }
+
+    function showInput() {
+      const input = document.getElementById("userInput").value
