@@ -6,11 +6,11 @@ sudo yum update -y
 
 # Install Apache2
 echo "Installing Apache2 web server..."
-sudo yum install apache2 -y
+sudo yum install httpd -y
 
 # Check the status of Apache2
 echo "Checking Apache2 service status..."
-sudo systemctl status apache2
+sudo systemctl status httpd
 
 #Remove existing index.html file from server
 #rm  /var/www/index.html
