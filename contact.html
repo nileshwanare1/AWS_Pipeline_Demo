@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,8 +14,16 @@
     <a href="dashboard.html">Dashboard</a>
 </nav>
 
-<h1>Welcome to Student Portal</h1>
-<p>This is the home page.</p>
+<h1>Contact Us</h1>
+
+<form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required><br><br>
+    <input type="email" placeholder="Email" required><br><br>
+    <textarea placeholder="Message"></textarea><br><br>
+    <button type="submit">Send</button>
+</form>
+
+<p id="msg"></p>
 
 <script src="script.js"></script>
 </body>
