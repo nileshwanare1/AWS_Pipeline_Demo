@@ -10,7 +10,8 @@ sudo yum install httpd -y
 
 # Check the status of Apache2
 echo "Checking Apache2 service status..."
-sudo systemctl status httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
 
 #Remove existing index.html file from server
 #rm  /var/www/index.html
