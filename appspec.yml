@@ -1,6 +1,7 @@
-version: 0.0
+---
+version: 0
 os: linux
-files
+files:
   - source: /
     destination: /var/www/html/
 hooks:
